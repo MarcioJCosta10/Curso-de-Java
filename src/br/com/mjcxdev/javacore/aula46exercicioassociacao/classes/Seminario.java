@@ -1,3 +1,15 @@
+/*
+*   Um conceito importante antes de passarmos para a próxima aula é que na associação de
+*   classe estavamos no conceito de que cada classe tem uma outra classe, por exemplo
+*   na classe Seminário ao associar com a classe Professor dizemos que:
+*   Seminário TEM UM professor
+*  agora em herança vamos dizer É UM
+*
+*
+* */
+
+
+
 package br.com.mjcxdev.javacore.aula46exercicioassociacao.classes;
 
 // 6 Criando a classe seminário
@@ -14,23 +26,27 @@ public class Seminario {
         System.out.println("____________________Relatório de Seminários____________________");
         System.out.println("Titulo: " + this.titulo);
 
+        //60 Tratando a possibilidade de erro noPointException para local ew professor
         // Daqui vamos testar em associacaoTest
         // 54 Continuando com o método print da Classe seminário
-        System.out.println("Professor Palestrante: " + this.professor.getNome());
-
-        //60 Tratando a possibilidade de erro noPointException para local
+        if (this.professor != null) {
+            System.out.println("Professor Palestrante: " + this.professor.getNome());
+        }else{
+            System.out.println("Nenhum professor cadastrado para esse seminário");
+        }
         if (this.local != null) {
             System.out.println("Local, rua: " + this.local.getRua() + " bairro " + this.local.getBairro() + " Estado " + this.local.getEstado() + " ");
         } else {
             System.out.println("Local não vinculado para esse seminário");
         }
+
         //61 - Tratando a possibilidade de erro noPointException para alunos
         if (this.alunos != null && alunos.length != 0) {
             // 55 como é um array para imprimir os alunos preciso usar um for
             System.out.println("____________Alunos Participantes____________");
             System.out.println();
-            for (Aluno alu : alunos) {
-                System.out.println("Aluno Participantes: " + alu.getNome());
+            for (Aluno aluno : alunos) {
+                System.out.println("Aluno Participantes: " + aluno.getNome());
             }
             return;
         }
