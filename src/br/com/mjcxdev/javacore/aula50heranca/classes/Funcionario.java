@@ -19,14 +19,31 @@ public class Funcionario extends Pessoa { //8 A realizar o extend podemos remove
     //private Endereço endereço;
     private double salario;
 
+    //31 Criando o bloco de inicialização de funcionário 1 e 2 e static 1"
+    {
+        System.out.println("Dentro do bloco de inicialização de funcionário 1");
+
+    }
+
+    {
+        System.out.println("Dentro do bloco de inicialização de funcionário 2");
+
+    }
+
+    static {
+        System.out.println("Dentro do bloco de inicialização estático de funcionário 1");
+
+    }
+
     //22- Se usamos um construtor diferente na superclasse somos obrigados a especificar na subclasse que construtor devemos chamar:
     // Criando o seguinte construtor
-    public Funcionario(String nome){// 23 temos que passar o parametro usado ao construir
+    public Funcionario(String nome) {// 23 temos que passar o parametro usado ao construir
         super(nome);     //24 temos que chamar o construtor da superclasse, e como chamamos? usamos o super
-                         //24 Aqui dentro do super podemos definir o contrutor que queremos
-                         // 24 O java vai identificar qual é o construtor que estamos chamando de acondo com os argumentos passados no super
+        //24 Aqui dentro do super podemos definir o contrutor que queremos
+        // 24 O java vai identificar qual é o construtor que estamos chamando de acondo com os argumentos passados no super
 
-
+        //30 Imprimir estamos dentro do construtor de funcionário
+        System.out.println("Dentro do construtor de funcionário");
 
     }
 
@@ -35,23 +52,23 @@ public class Funcionario extends Pessoa { //8 A realizar o extend podemos remove
 
     // 16 - Vamos criar o metodo com o mesmo modificador de acesso e tipo de retonrno e mesmo nome e mesma qtd de parametros
 
-    public void imprime(){
+    public void imprime() {
 
         //17 - como chamar o método da classe mãe que é a super classe? usamos a palavra super
         super.imprime();
         //18 - após incluir dentro desse método sobrescrito podemos também imprimir no mesmo método novo o atributo salário
-        System.out.println("Salario: "+ this.salario+"0");
+        System.out.println("Salario: " + this.salario + "0");
         //20 aqui chamaremos o método imprimeReciboPagamento() dentro do método imprime da classe funcionário
         imprimeReciboPagamento();
     }
 
- // 19 Agora imagine que na classe funcionário precisamos imprimir um recibo
+    // 19 Agora imagine que na classe funcionário precisamos imprimir um recibo
     // Vamos criar o método:
     // Aqui percebemos que como o modificador de acesso do atributo está private não conseguimos acessar
     // Então vamos mudar o modificador de acesso dos atributos classe Pessoa para protected, assim somente os filhos da classe e quem estiver no pacote terá acesso a esse atributo
 
-    public void imprimeReciboPagamento(){
-        System.out.println("Eu "+ super.nome + " recebi o pagamento de "+ this.salario +"0!");
+    public void imprimeReciboPagamento() {
+        System.out.println("Eu " + super.nome + " recebi o pagamento de " + this.salario + "0!");
 
     }
 

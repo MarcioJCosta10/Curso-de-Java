@@ -1,10 +1,13 @@
 /*
 *  Agora vamos tratar sobre métodos estáticos
 *   Métodos estáticos, da mesma forma dos atributos, pertencem a classe e não ao objeto
-*   Como métodos estáticos e atributos estáticos pertencem a classe mesmos antes de exitir objetos na memória, poderemos modificar esses valores
-*   Não podemos acessar atributos não estáticos através de métodos estáticos pois esses atributos não estáticos só serão criados dentro do objeto
+*   Como métodos estáticos e atributos estáticos pertencem a classe mesmos antes de exitir objetos na memória,
+*   poderemos modificar esses valores
+*   Não podemos acessar atributos não estáticos através de métodos estáticos pois esses atributos não estáticos
+*   só serão criados dentro do objeto
 *
-*   Regra: se você não está acessando atributo de classe, se estivermos apenas recebendo parametros podemos transformar esse método em estático
+*   Regra: se você não está acessando atributo de classe, se estivermos apenas recebendo parametros podemos
+*   transformar esse método em estático
 *
 *
 * */
